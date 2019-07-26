@@ -5,6 +5,7 @@
   "author": "",
   "license": "MIT",
   "scripts": {
+    "dev": "tsc-watch -p tsconfig.build.json --onSuccess \"node dist/main.js\"",
     "build": "rimraf dist && tsc -p tsconfig.build.json",
     "format": "prettier --write \"src/**/*.ts\"",
     "start": "ts-node -r tsconfig-paths/register src/main.ts",
@@ -27,7 +28,6 @@
     "rxjs": "^6.3.3"
   },
   "devDependencies": {
-    "@nestjs/testing": "^6.0.0",
     "@nestjs/testing": "6.1.1",
     "@types/express": "4.16.1",
     "@types/jest": "24.0.11",
